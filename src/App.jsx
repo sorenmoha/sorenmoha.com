@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
@@ -15,68 +14,84 @@ function App() {
 
   return (
     <div className="container">
+      <div className="navbar">
+        <div className="nav-left">
+          <img src="/SM-PFP-youtube.jpg" alt="Soren Logo" className="logo" />
+        </div>
 
-      <button onClick={toggleTheme} style={{ float: 'right' }}>
-        {theme === 'light' ? 'Dark' : 'Light'} Mode
-      </button>
+        <div className="nav-center">
+          <a href="https://github.com/sorenmoha">GitHub</a>
+          <a href="https://www.linkedin.com/in/soren-mohaghegh/">LinkedIn</a>
+          <a href="https://sorenmoha.github.io/pictures.html">Media</a>
+        </div>
+
+        <div className="nav-right">
+          <button onClick={toggleTheme}>
+            {theme === 'light' ? '🌙 Dark Mode' : '🌕 Light Mode'}
+          </button>
+        </div>
+      </div>
+
+
 
       <header>
         <h1>Soren Mohaghegh</h1>
         <p>
           AWS Cloud Support Engineer I (CSE I)
           <br />
-          Herndon, VA
+          Washington DC Metro Area
         </p>
       </header>
 
-      <section>
-        <h2>Objective</h2>
-        <p>
-          Seeking a technical role in software development or cloud engineering where I can leverage my experience with AWS services, Linux systems, and programming to deliver scalable, efficient solutions and grow as a contributor to modern infrastructure and application development.        </p>
-      </section>
+      {/* Two-column layout for Objective and Education */}
+      <div className="two-column">
+        <section className="half">
+          <h2>Objective</h2>
+          <p>
+            Seeking a technical role in software development or cloud engineering where I can leverage my experience with Linux systems, programming, and cloud computing services to deliver scalable, efficient solutions and grow as a contributor to modern infrastructure and application development.
+          </p>
+        </section>
 
+        <section className="half">
+          <h2>Education</h2>
+          <p>
+            <strong>Virginia Commonwealth University</strong>
+            <br />
+            Richmond, Virginia
+            <br />
+            B.S. Information Systems - 2019
+          </p>
+        </section>
+      </div>
 
-
-      <section>
-        <h2>Education</h2>
-        <p>
-          <strong>Virginia Commonwealth University</strong>
-          <br />
-          Richmond, Virginia
-          <br />
-          B.S. Information Systems (Dec. 2019)
-        </p>
-      </section>
-
-      <section>
+      <section className="no-hover">
         <h2>Key Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-block">
+        <div className="skills-grid">
+          <div className="skill-block">
             <strong>Cloud & Infrastructure:</strong> Deploying and maintaining production AWS environments (EC2, S3, IAM, etc.)
           </div>
-          <div class="skill-block">
+          <div className="skill-block">
             <strong>Linux System Administration:</strong> AL2, RHEL, Ubuntu, SUSE, and more — hardware/software troubleshooting
           </div>
-          <div class="skill-block">
+          <div className="skill-block">
             <strong>Networking:</strong> TCP/IP, DNS, firewalls, load balancers
           </div>
-          <div class="skill-block">
+          <div className="skill-block">
             <strong>Programming & Scripting:</strong> Python, Java, JavaScript, TypeScript, Bash
           </div>
-          <div class="skill-block">
+          <div className="skill-block">
             <strong>Web Technologies:</strong> HTML, CSS, Apache, NGINX
           </div>
-          <div class="skill-block">
+          <div className="skill-block">
             <strong>Version Control:</strong> Git, GitHub — team collaboration
           </div>
-          <div class="skill-block">
+          <div className="skill-block">
             <strong>DevOps Concepts:</strong> CI/CD pipelines, Docker, cloud-native tooling
           </div>
         </div>
       </section>
 
-
-      <section>
+      <section className="no-hover">
         <h2>Experience</h2>
 
         <h3>
