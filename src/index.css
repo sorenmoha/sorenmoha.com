@@ -1,0 +1,147 @@
+:root {
+  --card-bg: #ffffff;
+  --text-color: #121212;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 2rem;
+}
+
+body.light {
+  --background-color: linear-gradient(135deg, #f0f2f5, #e0e0e0);
+  --card-bg: #ffffff;
+  --text-color: #121212;
+}
+
+body.dark {
+  --background-color: linear-gradient(135deg, #1e1e1e, #2b2b2b);
+  --card-bg: #2c2c2c;
+  --text-color: #f0f0f0;
+}
+
+a {
+  font-weight: 500;
+  color: #1e90ff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+header p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+section {
+  padding: 1.25rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: inherit;
+  margin-bottom: 1.25rem;
+}
+
+section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #1e90ff;
+  padding-bottom: 0.3rem;
+  color: #1e90ff;
+}
+
+section:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Light/dark hover highlight fixes */
+body.light section:hover {
+  background-color: rgba(30, 144, 255, 0.08);
+}
+body.dark section:hover {
+  background-color: rgba(30, 144, 255, 0.02);
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+h3 small {
+  display: block;
+  font-size: 1.0rem;
+  font-weight: normal;
+  color: rgb(135, 135, 135);
+}
+
+ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+ul li {
+  margin-bottom: 0.6rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.container {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  max-width: 900px;
+  margin: auto;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.skill-block {
+  background-color: rgba(233, 234, 255, 0.1);
+  padding: 1rem;
+  border-left: 3px solid #1e90ff;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-block:hover {
+  background-color: rgba(30, 144, 255, 0.15);
+  transform: scale(1.02);
+}
