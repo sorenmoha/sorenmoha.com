@@ -28,8 +28,8 @@ function App() {
         </div>
 
         <div className="nav-right">
-          <button onClick={toggleTheme}>
-            {theme === 'light' ? '🌙 Dark Mode' : '🌕 Light Mode'}
+        <button onClick={toggleTheme} data-tooltip={theme === 'light' ? 'Dark Mode' : 'Light Mode'}>
+            {theme === 'light' ? '🌙' : '💡'}
           </button>
         </div>
       </div>
@@ -38,7 +38,9 @@ function App() {
         <header>
           <h1>Soren Mohaghegh</h1>
           <p>
-            AWS Cloud Support Engineer I
+            Cloud Support Engineer
+            <br />
+            Amazon Web Services
             <br />
             Washington DC Metro Area
           </p>
