@@ -45,6 +45,12 @@ body.light {
   --text-color: #121212;
 }
 
+body.dark {
+  --background-color: #121212;
+  --card-bg: #1e1e1e;        
+  --text-color: #eaeaea;     
+}
+
 
 
 /* ===================
