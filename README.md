@@ -32,12 +32,14 @@ This repository powers [sorenmoha.com](https://sorenmoha.com), my personal resum
 - Performed globally via 'deploy'.
 - Script is at `/usr/local/bin/deploy`
   
-  #!/bin/bash
-  echo "🔄 Removing old files from /usr/share/nginx/html..."
-  sudo rm -rf /usr/share/nginx/html/*
-  echo "📁 Copying new files from dist to /usr/share/nginx/html..."
-  sudo cp -r dist/* /usr/share/nginx/html/
-  echo "✅ Deployment complete!"
+```bash
+#!/bin/bash
+echo "🔄 Removing old files from /usr/share/nginx/html..."
+sudo rm -rf /usr/share/nginx/html/*
+echo "📁 Copying new files from dist to /usr/share/nginx/html..."
+sudo cp -r dist/* /usr/share/nginx/html/
+echo "✅ Deployment complete!"
+```
 
 ### TODO
 Introduce an Application Load Balancer (ALB) in front of the EC2 instance to enable horizontal scalability. The load balancer would distribute incoming traffic across multiple EC2 instances registered in a target group. This provides:
