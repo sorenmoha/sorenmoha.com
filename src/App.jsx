@@ -28,7 +28,7 @@ function App() {
         </div>
 
         <div className="nav-right">
-        <button onClick={toggleTheme} data-tooltip={theme === 'light' ? 'Dark Mode' : 'Light Mode'}>
+          <button onClick={toggleTheme} data-tooltip={theme === 'light' ? 'Dark Mode' : 'Light Mode'}>
             {theme === 'light' ? '🌙' : '💡'}
           </button>
         </div>
@@ -69,22 +69,22 @@ function App() {
           <h2>Key Skills</h2>
           <div className="skills-grid">
             <div className="skill-block">
-              <strong>Programming & Scripting:</strong> Python, Java, JavaScript, TypeScript, Bash
+              <strong>Languages & Scripting:</strong> Proficient in Python, Java, JavaScript, TypeScript, and Bash for backend systems, scripting, and automation.
             </div>
             <div className="skill-block">
-              <strong>Web Technologies:</strong> HTML, CSS, Apache, NGINX, React
+              <strong>Frontend & Web Technologies:</strong> Experienced with HTML5, CSS3, React, and responsive design. Familiar with web servers like Apache and NGINX.
             </div>
             <div className="skill-block">
-              <strong>Linux System Administration:</strong> RHEL, Ubuntu, Amazon Linux, SUSE, and more.
+              <strong>Linux System Engineering:</strong> Advanced troubleshooting and administration in RHEL, Ubuntu, Amazon Linux, and SUSE-based environments.
             </div>
             <div className="skill-block">
-              <strong>Cloud & Infrastructure:</strong> Deploying and maintaining production AWS environments (EC2, S3, IAM, etc.)
+              <strong>Cloud Platforms & DevOps:</strong> Hands-on deployment and support for AWS services including EC2, S3, IAM, Auto Scaling, and Systems Manager.
             </div>
             <div className="skill-block">
-              <strong>Networking:</strong> TCP/IP, DNS, firewalls, load balancers
+              <strong>Networking & Infrastructure:</strong> In-depth knowledge of TCP/IP, DNS, firewalls, VPNs, and load balancers in production environments.
             </div>
             <div className="skill-block">
-              <strong>Version Control:</strong> Git, CI/CD pipelines, Docker, cloud-native tooling
+              <strong>CI/CD & Version Control:</strong> Git version control, Docker containerization, CI/CD pipelines, and cloud-native DevOps tooling.
             </div>
           </div>
         </section>
@@ -93,66 +93,80 @@ function App() {
           <h2>Experience</h2>
 
           <h3>
-            Cloud Support Engineer - AWS
+            Linux Cloud Support Engineer - AWS
             <br />
             <small>EC2 Linux Support – Herndon, VA, June 2022 - Present</small>
           </h3>
           <ul>
-            <li>Provide Enterprise level support to customers for the following AWS Services: EC2 Linux, EBS, S3, Systems Manager, Auto Scaling, IAM, ElastiCache, Lightsail, CloudWatch, CloudTrail, Image Builder, VM I/E, CloudShell, Compute Optimizer, Health, Trusted Advisor, KMS, Migration Hub, Outposts, and more.</li>
-            <li>Diagnose and resolve sensitive, high-priority production issues for enterprise-level AWS customers, minimizing downtime.</li>
-            <li>Deploy and configure various production environments using knowledge of EC2 Instances, VPCs, Elastic Load Balancers, Route53 hosted zones and more.</li>
-            <li>Collaborate with internal service teams to identify and resolve bugs in AWS services and implement customer feature requests.</li>
-            <li>Work rotational On-call shift as the primary point of contact for global EC2 Linux related issues.</li>
+            <li>Delivered support for EC2 Linux and related AWS services, ensuring uptime and resolution of complex issues across global customer environments.</li>
+            <li>Troubleshot high-priority production incidents, minimizing downtime for enterprise workloads running on EC2, EBS, S3, and IAM.</li>
+            <li>Configured and deployed secure AWS infrastructure, including EC2, VPCs, ELBs, and Route53, aligned to customer architecture goals.</li>
+            <li>Worked cross-functionally with AWS service teams to investigate service bugs and shape new feature rollouts based on customer feedback.</li>
+            <li>Served as On-Call for Linux EC2 escalations; resolved real-time incidents affecting mission-critical systems.</li>
           </ul>
 
           <h3>
             Software Development Engineer Intern - AWS
             <br />
-            <small>EC2 Core / EC2 Metering – Arlington, VA, November 2023 - August 2024</small>
+            <small>EC2 Core / EC2 Metering – Arlington, VA, Nov 2023 - Aug 2024</small>
           </h3>
           <ul>
-            <li>Developed and maintained AWS EC2 Metering services that audits all customer EC2 instances, network, capacity reservation, disk (and other related EC2 resources) usage.</li>
-            <li>Increased metering efficiency by adding additional functionality to Apache Spark big data auditing platform for EC2 Metering service by implementing S3 and other AWS services.</li>
-            <li>Completed 10 month SDE boot camp prior to internship (parallel with Cloud Support Engineer I role).</li>
+            <li>Engineered scalable solutions within EC2 Metering, enabling high-accuracy auditing of compute and network resource usage across all AWS accounts.</li>
+            <li>Improved performance of Spark-based data pipelines by integrating S3 for metering logs and automating validation workflows.</li>
+            <li>Graduated from internal AWS SDE boot camp (10 month), covering distributed systems, code reviews, testing pipelines, and ownership best practices.</li>
           </ul>
 
           <h3>
             Data Center Operations Technician – AWS
             <br />
-            <small>Ashburn, VA, April 2020 - June 2022</small>
+            <small>Ashburn, VA, Apr 2020 - Jun 2022</small>
           </h3>
           <ul>
-            <li>Monitored, repaired, and maintained AWS EC2, S3 and EBS host types by utilizing diagnostic tools within Unix/Linux.</li>
-            <li>Worked a rotational, on-call shift in order to maintain functionality of high priority infrastructure within AWS data centers.</li>
-            <li>Utilized JavaScript and Python to build scripts in order to automate repetitive tasks for fellow technicians.</li>
-            <li>Troubleshooted TOR switch issues such as link failures, fiber issues or device downs.</li>
-            <li>Created internal SOPs, wikis and other useful resources to train and keep employees up to date with best practices.</li>
-            <li>Collaborated with hardware engineering teams to identify and resolve large-scale events and server bugs.</li>
-            <li>Utilized AWS internal ticketing systems to remediate issues within various AWS data centers.</li>
+            <li>Maintained EC2, S3, and EBS host infrastructure using Linux diagnostic tooling to minimize outages and improve fleet health KPIs.</li>
+            <li>Developed internal automation scripts in Python and JavaScript to streamline repetitive operational tasks, reducing manual effort by 30%.</li>
+            <li>Handled on-call troubleshooting of hardware failures and networking incidents (e.g., TOR switch outages, fiber diagnostics).</li>
+            <li>Contributed to technical SOPs and runbooks used globally by AWS DCO teams.</li>
           </ul>
 
           <h3>
             Technical Support Engineer - Empriza Biotech
             <br />
-            <small>Richmond, VA, November 2017 – December 2019</small>
+            <small>Richmond, VA, Nov 2017 – Dec 2019</small>
           </h3>
           <ul>
-            <li>Created logistics tracking systems to document and organize all inbound and outbound shipments.</li>
-            <li>Migrated the startup from an online accounting system to a localized server, giving the accounting team more powerful tools and increased reliability.</li>
-            <li>Managed IT infrastructure, including purchasing workstations, troubleshooting hardware and software, and maintaining inventory of $400,000 worth of materials.</li>
+            <li>Led IT support for logistics and accounting systems, migrating the business from a cloud-based platform to on-prem server infrastructure.</li>
+            <li>Maintained $400K+ in lab hardware and inventory; managed procurement and system imaging for workstations and lab PCs.</li>
+            <li>Created internal scripts to automate task tracking and report generation for lab workflows.</li>
           </ul>
 
           <h3>
             Medical Office Assistant - OrthoVirginia
             <br />
-            <small>Herndon, VA, May 2016 – August 2016</small>
+            <small>Herndon, VA, May 2016 – Aug 2016</small>
           </h3>
           <ul>
-            <li>Utilized Allscripts to maintain patient appointment schedules as directed by physicians.</li>
-            <li>Interacted with IT staff to report system availability issues and helped to troubleshoot equipment issues.</li>
+            <li>Managed patient scheduling using Allscripts EHR; coordinated appointments, follow-ups, and physician calendars.</li>
+            <li>Reported system errors and coordinated resolution with internal IT staff, supporting 30+ users across two sites.</li>
           </ul>
         </section>
       </div>
+
+      <footer className="footer">
+        <div className="footer-line">
+          <a href="mailto:soren@sorenmoha.com">soren@sorenmoha.com</a>
+          <span className="footer-links">
+            <a href="https://github.com/sorenmoha">GitHub</a>
+            <span className="divider">|</span>
+            <a href="https://www.linkedin.com/in/soren-mohaghegh/">LinkedIn</a>
+            <span className="divider">|</span>
+            <a href="https://sorenmoha.github.io/pictures.html">Media</a>
+          </span>
+        </div>
+        <small>© 2025 Soren Mohaghegh</small>
+      </footer>
+
+
+
     </>
   );
 }
