@@ -103,7 +103,7 @@ section h2 {
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
-  overflow-x: hidden;
+  
 }
 
 header {
@@ -170,12 +170,17 @@ body.dark section:hover:not(.no-hover) {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.navbar-left,
-.navbar-center,
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+/* "Invisble" link in navbar*/
+.nav-left {
+  cursor: default;
+}
+
+.nav-left a,
+.nav-left a:hover,
+.nav-left img {
+  cursor: default;
+  text-decoration: none;
+  outline: none;
 }
 
 .nav-center {
@@ -242,16 +247,10 @@ body.dark section:hover:not(.no-hover) {
 
 .skill-block:hover {
   background-color: rgba(30, 144, 255, 0.15);
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
-/* ===================
-   Utility
-=================== */
-.no-hover:hover {
-  transform: none !important;
-  box-shadow: none !important;
-}
+
 
 /* ===================
    Mobile Adjustments
@@ -264,15 +263,4 @@ body.dark section:hover:not(.no-hover) {
     text-align: center;
   }
 
-  .navbar-left,
-  .navbar-center,
-  .navbar-right {
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-
-  .navbar-right {
-    margin-top: 0.5rem;
-  }
 }
