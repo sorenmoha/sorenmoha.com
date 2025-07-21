@@ -37,7 +37,7 @@ function App() {
       <header>
         <h1>Soren Mohaghegh</h1>
         <p>
-          AWS Cloud Support Engineer I (CSE I)
+          AWS Cloud Support Engineer I
           <br />
           Washington DC Metro Area
         </p>
@@ -108,7 +108,7 @@ function App() {
         </ul>
 
         <h3>
-          Software Development Engineer Intern (SDE Intern) - AWS
+          Software Development Engineer Intern (SDE I) - AWS
           <br />
           <small>EC2 Core / EC2 Metering – Arlington, VA, November 2023 - August 2024</small>
         </h3>

@@ -1,3 +1,6 @@
+/* ===================
+   Root Variables
+=================== */
 :root {
   --card-bg: #ffffff;
   --text-color: #121212;
@@ -14,6 +17,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ===================
+   Base Styling
+=================== */
 body {
   margin: 0;
   min-height: 100vh;
@@ -25,6 +31,7 @@ body {
   color: var(--text-color);
   padding: 1rem;
   font-family: var(--body-font);
+  overflow-x: hidden;
 }
 
 body.light {
@@ -39,6 +46,9 @@ body.dark {
   --text-color: #f0f0f0;
 }
 
+/* ===================
+   Typography
+=================== */
 a {
   font-weight: 500;
   color: #1e90ff;
@@ -53,14 +63,47 @@ h1, h2, h3, .navbar a, .navbar button {
   font-family: var(--heading-font);
 }
 
-body, p, li, ul, section, strong, .skill-block, .container {
-  font-family: var(--body-font);
-}
-
 h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   text-align: center;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+h3 small {
+  display: block;
+  font-size: 1.0rem;
+  font-weight: normal;
+  color: rgb(135, 135, 135);
+}
+
+section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #1e90ff;
+  padding-bottom: 0.3rem;
+  color: #1e90ff;
+}
+
+/* ===================
+   Layout Containers
+=================== */
+.container {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 header {
@@ -77,8 +120,8 @@ header p {
 section {
   padding: 0.75rem;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:hover:not(.no-hover) {
@@ -94,88 +137,6 @@ body.dark section:hover:not(.no-hover) {
   background-color: rgba(30, 144, 255, 0.02);
 }
 
-section h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  border-bottom: 2px solid #1e90ff;
-  padding-bottom: 0.3rem;
-  color: #1e90ff;
-}
-
-h3 {
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.3rem;
-}
-
-h3 small {
-  display: block;
-  font-size: 1.0rem;
-  font-weight: normal;
-  color: rgb(135, 135, 135);
-}
-
-ul {
-  list-style: none;
-  padding-left: 1.5rem;
-  margin-top: 0.5rem;
-}
-
-ul li {
-  position: relative;
-  margin-bottom: 0.75rem;
-  padding-left: 1.2rem;
-  line-height: 1.6;
-  font-size: 1.05rem;
-}
-
-ul li::before {
-  content: "▪";
-  position: absolute;
-  left: 0;
-  top: 0.1rem;
-  font-size: 1.2rem;
-  color: #1e90ff;
-}
-
-strong {
-  font-weight: 600;
-}
-
-.container {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  max-width: 900px;
-  margin: auto;
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-  line-height: 1.6;
-  font-size: 1.05rem;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 0.8rem;
-  margin-top: 1.0rem;
-}
-
-.skill-block {
-  background-color: rgba(233, 234, 255, 0.1);
-  padding: 1rem;
-  border-left: 3px solid #1e90ff;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.skill-block:hover {
-  background-color: rgba(30, 144, 255, 0.15);
-  transform: scale(1.02);
-}
-
 .two-column {
   display: flex;
   text-align: center;
@@ -188,8 +149,12 @@ strong {
   min-width: 300px;
 }
 
+/* ===================
+   Navbar
+=================== */
 .navbar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -200,9 +165,18 @@ strong {
   position: sticky;
   top: 1rem;
   z-index: 100;
+  max-width: 100%;
+  box-sizing: border-box;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
 .nav-center {
   display: flex;
@@ -210,14 +184,6 @@ strong {
   justify-content: center;
   flex: 1;
   text-align: center;
-}
-
-.nav-left,
-.nav-right {
-  flex-basis: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .logo {
@@ -254,7 +220,59 @@ strong {
   background-color: #535bf2;
 }
 
+/* ===================
+   Skills Grid
+=================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.0rem;
+}
+
+.skill-block {
+  background-color: rgba(233, 234, 255, 0.1);
+  padding: 1rem;
+  border-left: 3px solid #1e90ff;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-block:hover {
+  background-color: rgba(30, 144, 255, 0.15);
+  transform: scale(1.02);
+}
+
+/* ===================
+   Utility
+=================== */
 .no-hover:hover {
   transform: none !important;
   box-shadow: none !important;
+}
+
+/* ===================
+   Mobile Adjustments
+=================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-right {
+    margin-top: 0.5rem;
+  }
 }
