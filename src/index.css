@@ -38,17 +38,14 @@ p, li, small {
   font-family: var(--body-font);
 }
 
+
 body.light {
   --background-color: linear-gradient(135deg, #f0f2f5, #e0e0e0);
   --card-bg: #ffffff;
   --text-color: #121212;
 }
 
-body.dark {
-  --background-color: linear-gradient(135deg, #1e1e1e, #2b2b2b);
-  --card-bg: #2c2c2c;
-  --text-color: #f0f0f0;
-}
+
 
 /* ===================
    Typography

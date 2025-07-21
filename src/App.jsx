@@ -12,6 +12,41 @@ function App() {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 
+
+  const bannerLines = [
+    'Cloud Support Engineer',
+    'Amazon Web Services',
+    'Washington DC Metro Area',
+  ];
+  const [typedLines, setTypedLines] = useState(['', '', '']);
+  
+  useEffect(() => {
+    let currentLine = 0;
+    let currentChar = 0;
+  
+    const typeNextChar = () => {
+      setTypedLines((prevLines) => {
+        const newLines = [...prevLines];
+        const fullLine = bannerLines[currentLine];
+  
+        newLines[currentLine] = fullLine.slice(0, currentChar + 1);
+        return newLines;
+      });
+  
+      if (currentChar < bannerLines[currentLine].length - 1) {
+        currentChar++;
+        setTimeout(typeNextChar, 27);  //delay per char in single line
+      } else if (currentLine < bannerLines.length - 1) {
+        currentLine++;
+        currentChar = 0;
+        setTimeout(typeNextChar, 1);  //delay to move to next line
+      }
+    };
+  
+    typeNextChar();
+  }, []);
+  
+
   return (
     <>
       <div className="navbar">
@@ -35,16 +70,17 @@ function App() {
       </div>
 
       <div className="container">
-        <header>
-          <h1>Soren Mohaghegh</h1>
-          <p>
-            Cloud Support Engineer
-            <br />
-            Amazon Web Services
-            <br />
-            Washington DC Metro Area
-          </p>
-        </header>
+      <header>
+  <h1>Soren Mohaghegh</h1>
+  <p>
+  {typedLines.map((line, index) => (
+    <span key={index}>
+      {line}
+      <br />
+    </span>
+  ))}
+</p>
+</header>
 
         <div className="two-column">
           <section className="half">
