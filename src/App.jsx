@@ -95,7 +95,7 @@ function App() {
         <h2>Experience</h2>
 
         <h3>
-          Cloud Support Engineer I (CSE I) - AWS
+          Cloud Support Engineer - AWS
           <br />
           <small>EC2 Linux Support – Herndon, VA, June 2022 - Present</small>
         </h3>
@@ -108,7 +108,7 @@ function App() {
         </ul>
 
         <h3>
-          Software Development Engineer Intern (SDE I) - AWS
+          Software Development Engineer Intern - AWS
           <br />
           <small>EC2 Core / EC2 Metering – Arlington, VA, November 2023 - August 2024</small>
         </h3>
